@@ -1,0 +1,84 @@
+a {
+	color: #ff8503;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.page-wrapper {
+	max-width: 960px;
+	margin: 100px auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.basket-wrapper {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 25px;
+	border: 1px solid #eee;
+}
+
+.basket-wrapper .item {
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
+
+.basket-wrapper .tire-wrapper img {
+	max-width: 50px;
+	height: auto;
+}
+
+.result-list .remove-item,
+.result-list .number-wrapper,
+.basket-wrapper .in-basket {
+	display: none;
+}
+
+.basket .left {
+	display: none;
+}
+
+.number-wrapper .plus,
+.number-wrapper .minus {
+	border: 1px solid #ff8503;
+	background: #ff8503;
+	color: #fff;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="number"],
+.contact-form textarea {
+	width: 100%;
+	border: 1px solid #aaa;
+	padding: 8px;
+	margin: 0 0 10px;
+}
+
+.contact-form textarea {
+	height: 100%;
+	min-height: 157px;
+}
+
+.contact-form input[type="submit"] {
+	cursor: pointer;
+	border: 0 none;
+	padding: 5px 12px;
+	font-size: 16px;
+	max-width: 250px;
+	background: #ff8503;
+	color: #fff;
+}

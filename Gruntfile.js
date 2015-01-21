@@ -4,6 +4,29 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
+		/*
+		php: {
+		    test: {
+		        options: {
+		            keepalive: true,
+		            open: true
+		        }
+		    }
+		},
+		*/
+
+		php: {
+		    dev: {
+		        options: {
+		            hostname: '127.0.0.1',
+                	port: 9000,
+                	base: 'build',
+                	keepalive: false,
+                	open: false
+		        }
+		    }
+		},
+
 		assemble: {
 			options: {
 				layout: 'page.hbs',
@@ -45,6 +68,12 @@ module.exports = function(grunt) {
 						src: ['**/*']
 					},
 					{
+						cwd: 'source/',
+						dest: 'build/',
+						expand: true,
+						src: ['*.php']
+					},
+					{
 						cwd: 'source/csv/',
 						dest: 'build/csv/',
 						expand: true,
@@ -61,8 +90,14 @@ module.exports = function(grunt) {
 						src: ['**/*']
 					},
 					{
+						cwd: 'source/',
+						dest: 'dist/',
+						expand: true,
+						src: ['*.php']
+					},
+					{
 						cwd: 'source/csv/',
-						dest: 'build/csv/',
+						dest: 'dist/csv/',
 						expand: true,
 						src: ['**/*']
 					}
@@ -198,11 +233,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-php');
 
 	grunt.registerTask('default', ['build']);
 
 	grunt.registerTask('build', [
-		'newer:assemble:dev',
+		//'newer:assemble:dev',
+		'php:dev',
 		'compass:dev',
 		'includes:dev',
 		'copy:dev',
@@ -212,7 +249,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('dist', [
-		'newer:assemble:dist',
+		//'newer:assemble:dist',
 		'compass:dist',
 		'cssmin:dist',
 		'includes:dist',
