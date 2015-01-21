@@ -26,6 +26,10 @@ label {
 	color: #888;
 }
 
+.error {
+	color: gray;
+}
+
 .row {
 	@include clearfix;
 
@@ -196,10 +200,11 @@ form.form-search {
   		margin: 10px 0;
   		padding: 10px 0 20px;
   		border-bottom: 1px solid #eee;
-
+		/*
   		&:first-child {
   			display: none;
   		}
+  		*/
   		&:last-child {
   			border-bottom: 0 none;
   		}

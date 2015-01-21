@@ -1,6 +1,5 @@
 <?php
 
-	
 
 ?>
 
@@ -66,9 +65,10 @@
 			<div class="row">
 				<label for="weather" class="left">Reifentyp</label>
 				<select name="wetter" id="wetter">
-					<option value="w">Winterreifen</option>
 					<option value="s">Sommerreifen</option>
+					<option value="w">Winterreifen</option>
 					<option value="g">Ganzjahresreifen</option>
+					<option value="">Andere</option>
 				</select>
 			</div>
 
@@ -261,8 +261,8 @@
 				if(isset($_GET['submit'])) {
 				
 					if ($num == 0) {
-						echo "Leider konnten wir in unserem Sortiment keine zu Ihrer Suchanfrage passenden Reifen finden.<br>" .
-								"Über die Anpassung der Filtereinstellungen oben können Sie Ihre Auswahl anpassen.";
+						echo "<p class=\"error\">Leider konnten wir in unserem Sortiment keine zu Ihrer Suchanfrage passenden Reifen finden.<br>" .
+								"Über die Anpassung der Filtereinstellungen oben können Sie Ihre Auswahl anpassen.<p/>";
 					} else {
 						echo $num . " Reifen gefunden";
 					}
@@ -288,12 +288,13 @@
 					$kraftstoff = $tire[16];
 					$haftung = $tire[17];
 					$lautstaerke = $tire[18];
+
 					
 					echo "<div class=\"item\">
 							<div class=\"row\">
 								<div class=\"left col-md-03\">
 									<div class=\"tire-wrapper\">
-										<img src=\"img/tire.jpg\" alt=\"tire\">
+										<img src=\"http://shop.reifen-pabst.de/images/" . $bezeichnung . ".jpg\" alt=\"tire\" onError=\"this.onerror=null;this.src='img/tire.jpg';\" >
 									</div>
 								</div>
 								<div class=\"center col-md-05\">
