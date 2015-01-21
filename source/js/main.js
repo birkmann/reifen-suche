@@ -18,6 +18,7 @@ $.extend({
 });
 
 $(document).ready(function(){
+	
 	var getTyp = $.getUrlVar('typ');
 	var getWetter = $.getUrlVar('wetter');
 	var getHersteller = $.getUrlVar('hersteller');

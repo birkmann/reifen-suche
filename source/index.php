@@ -1,5 +1,7 @@
 <?php
 
+	
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +66,7 @@
 			<div class="row">
 				<label for="weather" class="left">Reifentyp</label>
 				<select name="wetter" id="wetter">
-					<option value="w" selected>Winterreifen</option>
+					<option value="w">Winterreifen</option>
 					<option value="s">Sommerreifen</option>
 					<option value="g">Ganzjahresreifen</option>
 				</select>
@@ -282,12 +284,16 @@
 					$loadindex = $tire[11];
 					$speedindex = $tire[12];
 					$bauart = $tire[14];
+
+					$kraftstoff = $tire[16];
+					$haftung = $tire[17];
+					$lautstaerke = $tire[18];
 					
 					echo "<div class=\"item\">
 							<div class=\"row\">
 								<div class=\"left col-md-03\">
 									<div class=\"tire-wrapper\">
-										<img src=\"img/tire.png\" alt=\"tire\">
+										<img src=\"img/tire.jpg\" alt=\"tire\">
 									</div>
 								</div>
 								<div class=\"center col-md-05\">
@@ -295,9 +301,11 @@
 									<span class=\"name\"><b>" . $hersteller . "</b> " . $bezeichnung . "</span>
 									<span class=\"artikelnummer hidden\">" . $artikelnummer . "</span>
 									<span class=\"nubmers\">" . $querschnitt . "/" . $durchmesser . " R" . $zoll . " " . $loadindex . $speedindex . "</span>
+									<br/>
+									<span class=\"icons\">" . "<span class=\"kraftstoff\">" . $kraftstoff . "</span>" . "<span class=\"haftung\">" . $haftung . "</span>" . "<span class=\"lautstaerke\">" . $lautstaerke . " dB</span>" . "</span>
 								</div>
 								<div class=\"right col-md-04\">
-									<div class=\"row\">
+									<div class=\"row row-price\">
 										<span class=\"price\"><span class=\"value\">" . $preis . "</span> €</span>
 									</div>
 									<div class=\"row\">
@@ -310,7 +318,7 @@
 												<span class=\"plus\">+</span><span class=\"number\">0</span><span class=\"minus\">-</span>
 											</div>
 											<a class=\"in-basket\" href=\"#body\">Warenkorb</a>
-											<button class=\"remove-item\">entfernen</button>
+											<a href=\"#\" class=\"remove-item\">entfernen</a>
 										</div>
 									</div>
 								</div>

@@ -1,10 +1,9 @@
 a {
 	color: #ff8503;
 	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .page-wrapper {
@@ -16,43 +15,106 @@ a:hover {
 	display: none;
 }
 
-.basket-wrapper {
-	max-width: 800px;
-	margin: 20px auto;
-	padding: 25px;
-	border: 1px solid #eee;
-}
-
-.basket-wrapper .item {
-	padding-bottom: 10px;
-	border-bottom: 1px solid;
-	margin-bottom: 10px;
-}
-
-.basket-wrapper .tire-wrapper img {
-	max-width: 50px;
-	height: auto;
-}
-
 .result-list .remove-item,
 .result-list .number-wrapper,
 .basket-wrapper .in-basket {
 	display: none;
 }
 
+.basket-wrapper {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 25px;
+	border: 1px solid #eee;
+	.item {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 25px;
+		.icons {
+
+			span {
+				margin: 5px 10px 0 0;
+				width: 30px;
+				height: 25px;
+				background: url("../img/sprite.png") no-repeat;
+				padding: 0 0 0 24px;
+				line-height: 22px;
+				color: #555;
+				font-size: 14px;
+			}
+
+			.kraftstoff {
+				background-position: 2px 2px;
+			}
+
+			.haftung {
+				background-position: 2px -38px;
+			}
+
+			.lautstaerke {
+				background-position: 2px -79px;
+			}
+
+		}
+	}
+	.row-price {
+		margin: 10px 0;
+		@include breakpoint(tablet) {
+			margin: 0;
+			float: left;
+		}
+		.price {
+			font-weight: bold;
+		}
+	}
+	.number {
+		font-weight: bold;
+		margin: 0 3px;
+	}
+	.tire-wrapper img {
+		max-width: 50px;
+		height: auto;
+	}
+	.remove-item {
+		font-size: 0.9em;
+		display: block;
+		color: #202020;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 .basket .left {
 	display: none;
 }
 
+.number-wrapper {
+	margin: 0 0 40px;
+	@include breakpoint(tablet) {
+		margin: 0 0 15px;
+	}
+}
+
 .number-wrapper .plus,
 .number-wrapper .minus {
+
+	font-size: 20px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+
+	@include breakpoint(tablet) {
+		font-size: 16px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+	}
+
 	border: 1px solid #ff8503;
 	background: #ff8503;
 	color: #fff;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
 	text-align: center;
 	font-weight: bold;
 	border-radius: 100%;
@@ -62,6 +124,7 @@ a:hover {
 .contact-form input[type="text"],
 .contact-form input[type="number"],
 .contact-form textarea {
+	font-size: 13px;
 	width: 100%;
 	border: 1px solid #aaa;
 	padding: 8px;
@@ -70,7 +133,7 @@ a:hover {
 
 .contact-form textarea {
 	height: 100%;
-	min-height: 157px;
+	min-height: 166px;
 }
 
 .contact-form input[type="submit"] {

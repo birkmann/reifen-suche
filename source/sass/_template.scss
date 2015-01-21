@@ -194,7 +194,7 @@ form.form-search {
 		@include clearfix;
 
   		margin: 10px 0;
-  		padding: 10px 0;
+  		padding: 10px 0 20px;
   		border-bottom: 1px solid #eee;
 
   		&:first-child {
@@ -217,7 +217,7 @@ form.form-search {
   		}
 
   		.center {
-			margin: 15px 0 25px 0;
+			margin: 5px 0 25px 0;
 
 			.type {
 				display: block;
@@ -229,6 +229,32 @@ form.form-search {
 				display: block;
   				font-size: 1.2em;
   				margin: 0 0 5px;
+			}
+
+			.icons {
+
+				span {
+					margin: 5px 10px 0 0;
+					width: 30px;
+					height: 25px;
+					background: url("../img/sprite.png") no-repeat;
+					padding: 0 0 0 24px;
+					line-height: 22px;
+					color: #555;
+					font-size: 14px;
+				}
+
+				.kraftstoff {
+					background-position: 2px 2px;
+				}
+
+				.haftung {
+					background-position: 2px -38px;
+				}
+
+				.lautstaerke {
+					background-position: 2px -79px;
+				}
 			}
   		}
 
@@ -249,13 +275,14 @@ form.form-search {
 				display: block;
 				font-size: 2em;
 				color: #ff8503;
-				margin: 15px 0 30px;
+				margin: 0px 0 30px;
 				@include breakpoint(tablet) {
 					float: right;
-    				margin: 15px 0 50px;
+    				margin: 0px 0 30px;
 				}
 			}
 			.in-basket {
+				text-align: center;
 				cursor: pointer;
 				display: block;
 				padding: 6px 15px;
