@@ -4,25 +4,11 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		/*
-		php: {
-		    test: {
-		        options: {
-		            keepalive: true,
-		            open: true
-		        }
-		    }
-		},
-		*/
-
 		php: {
 		    dev: {
 		        options: {
-		            hostname: '127.0.0.1',
-                	port: 9000,
-                	base: 'build',
-                	keepalive: false,
-                	open: false
+		            port: 8080,
+		            base: 'build'
 		        }
 		    }
 		},
