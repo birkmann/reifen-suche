@@ -124,7 +124,7 @@ label {
 
 form.form-search {
 
-	max-width: 800px;
+	max-width: 900px;
 	margin: 20px auto;
 	padding: 25px;
 	border: 1px solid #eee;
@@ -189,7 +189,7 @@ form.form-search {
 }
 
 .result-list {
-	max-width: 800px;
+	max-width: 900px;
 	margin: 20px auto;
 	padding: 25px;
 	border: 1px solid #eee;
@@ -213,10 +213,20 @@ form.form-search {
   			.tire-wrapper {
   				img {
   					width: 100%;
+  					/*
   					max-width: 200px;
+  					*/
+  					/*
   					@include breakpoint(tablet) {
 						max-width: 140px;
 					}
+					*/
+  				}
+  				small {
+  					display: block;
+  					width: 100%;
+  					text-align: center;
+  					color: #aaa;
   				}
   			}
   		}
@@ -232,7 +242,8 @@ form.form-search {
 
 			.name {
 				display: block;
-  				font-size: 1.2em;
+  				font-size: 1.6em;
+  				line-height: 1.2em;
   				margin: 0 0 5px;
 			}
 
@@ -284,6 +295,15 @@ form.form-search {
 				@include breakpoint(tablet) {
 					float: right;
     				margin: 0px 0 30px;
+				}
+			}
+			.mwst {
+				display: block;
+				color: #aaa;
+				font-size: 13px;
+				margin: 10px 0 0px;
+				@include breakpoint(tablet) {
+					float: right;
 				}
 			}
 			.in-basket {

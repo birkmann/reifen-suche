@@ -32,9 +32,9 @@
 					<div class="col-md-06">
 						<input type="text" name="input-first-name" id="input-first-name" placeholder="Vorname" required>
 						<br>
-						<input type="text" name="input-last-name" id="input-last-name" placeholder="Vorname" required>
+						<input type="text" name="input-last-name" id="input-last-name" placeholder="Nachname" required>
 						<br>
-						<input type="number" name="input-phone" id="input-phone" placeholder="Telefonnummer" required>
+						<input type="phone" name="input-phone" id="input-phone" placeholder="Telefonnummer" required>
 						<br>
 						<input type="text" name="input-mail" id="input-mail" placeholder="E-Mail" required>
 					</div>
@@ -294,9 +294,10 @@
 								<div class=\"left col-md-03\">
 									<div class=\"tire-wrapper\">
 										<img src=\"http://shop.reifen-pabst.de/images/" . $bezeichnung . ".jpg\" alt=\"tire\" onError=\"this.onerror=null;this.src='img/tire.jpg';\" >
+										<small>Grafik kann abweichen</small>
 									</div>
 								</div>
-								<div class=\"center col-md-05\">
+								<div class=\"center col-md-06\">
 									<span class=\"type\">" . $bauart . $saison . "</span>
 									<span class=\"name\"><b>" . $hersteller . "</b> " . $bezeichnung . "</span>
 									<span class=\"artikelnummer hidden\">" . $artikelnummer . "</span>
@@ -304,9 +305,9 @@
 									<br/>
 									<span class=\"icons\">" . "<span class=\"kraftstoff\">" . $kraftstoff . "</span>" . "<span class=\"haftung\">" . $haftung . "</span>" . "<span class=\"lautstaerke\">" . $lautstaerke . " dB</span>" . "</span>
 								</div>
-								<div class=\"right col-md-04\">
+								<div class=\"right col-md-03\">
 									<div class=\"row row-price\">
-										<span class=\"price\"><span class=\"value\">" . $preis . "</span> €</span>
+										<span class=\"price\"><span class=\"value\">" . $preis . "</span> €<br><small class=\"mwst\">inkl 19% MwSt.</small></span>
 									</div>
 									<div class=\"row\">
 										<div class=\"col-md-06\">
