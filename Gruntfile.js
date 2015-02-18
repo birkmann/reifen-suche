@@ -192,6 +192,10 @@ module.exports = function(grunt) {
 			templates: {
 				files: ['source/assemble/**/*.{json,hbs}'],
 				tasks: ['assemble:dev']
+			},
+			php: {
+				files: ['source/*.php'],
+				tasks: ['copy']
 			}
 		},
 
