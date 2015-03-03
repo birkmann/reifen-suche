@@ -27,6 +27,11 @@ $(document).ready(function(){
 	var getHoehe = $.getUrlVar('hoehe');
 	var getZoll = $.getUrlVar('zoll');
 
+	if (getTyp != undefined) {
+	 	// $(document).scrollTop( $("#jumpanchor").offset().top );
+	 	//document.getElementById("jumpanchor").scrollIntoView();
+	 	$('html,body').animate({'scrollTop' : 500},1000);
+	};
 
 	if (getTyp != undefined) {
 	  $("#typ").val(getTyp);
@@ -56,14 +61,14 @@ $(document).ready(function(){
 	  $("#zoll").val(getZoll);
 	};
 
-	$('#typ').bind('change', function (e) { 
+	$('#typ').bind('change', function (e) {
 		if( $('#typ').val() == 'Motorrad') {
 			$("#wetter option:contains(Andere)").attr('selected', 'selected');
 		}
 		else if( $('#typ').val() != 'Motorrad') {
 			$("#wetter").val('s');
 		}         
-	}).trigger('change');
+	});
 
 
 	function load(){

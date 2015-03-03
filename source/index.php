@@ -208,7 +208,7 @@
 			</div>
 
 			<br>
-			<a href="index.php" class="link-reset">zurücksetzen</a>
+			<a href="index.php" class="link-reset" id="jumpanchor">zurücksetzen</a>
 
 		</form>
 
