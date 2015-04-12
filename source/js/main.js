@@ -147,7 +147,8 @@ $(document).ready(function(){
 	    var itemAddedArtikelNummer = $(this).find(".artikelnummer").html();
 	    var itemAddedQuantity = $(this).find(".number").html();
 	    var itemAddedPrice = $(this).find(".value").html();
-	    var itemAddedTotal = "<div>" + itemAddedName + "<br>" + "<b>Nummer:</b> " + itemAddedArtikelNummer + "<br>" + "<b>Preis:</b> " + itemAddedPrice + " € <br>" + "<b>Menge:</b> " + itemAddedQuantity + "<br>";
+		var itemNumbers = $(this).find(".nubmers").html();
+	    var itemAddedTotal = "<div>" + itemAddedName + "<br>" + "<b>Nummer:</b> " + itemAddedArtikelNummer + "<br>" + "<b>Größe:</b> " + itemNumbers + "<br>" + "<b>Preis:</b> " + itemAddedPrice + " € <br>" + "<b>Menge:</b> " + itemAddedQuantity + "<br>";
 	    finalOrder += itemAddedTotal + "<br><hr><br>";
 	  });
 
